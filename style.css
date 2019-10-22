@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+.container {
+  width: 800px;
+  color: #fff;
+  padding: 50px;
+  margin: 50px auto 0;
+  background-color: rgba(255, 24, 0, 0.62);
+}
+h1 {
+  margin-bottom: 30px;
+}
+.bar {
+  background-color: #EEE;
+  padding: 2px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.bar::before {
+  content: attr(data-skill);
+  padding: 8px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  animation: load 2s 0s;
+}
+.bar.html::before {
+  background-color: lightblue;
+  width: calc(100% - 10%);
+}
+.bar.css::before {
+  background-color: gray;
+  width: calc(100% - 25%);
+}
+.bar.js::before {
+  background-color: #000;
+  width: calc(100% - 30%);
+}
+.bar.jquery::before {
+  background-color: yellowgreen;
+  width: calc(100% - 20%);
+}
+.bar.php::before {
+  background-color: violet;
+  width: calc(100% - 60%);
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
